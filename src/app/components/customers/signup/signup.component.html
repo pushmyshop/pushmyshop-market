@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Sign Up</h1>
+  <form (ngSubmit)="new()">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="customer.firstName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="customer.lastName"  required>
+    </div>
+
+    <div class="form-group">
+      <label for="mail">Mail</label>
+      <input type="text" class="form-control" id="mail" name="mail" [(ngModel)]="customer.mail"  required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="customer.password"  required>
+    </div>
+
+    <div class="form-group">
+      <label for="nameOfCompagny">Name of your compagny</label>
+      <input type="text" class="form-control" id="nameOfCompagny" name="nameOfCompagny" [(ngModel)]="customer.nameOfCompagny"  required>
+    </div>
+
+    <div class="form-group">
+      <label for="templateOfCompagny">Template for your compagny</label>
+      <input type="text" class="form-control" id="templateOfCompagny" name="templateOfCompagny" [(ngModel)]="customer.templateOfCompagny"  required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
