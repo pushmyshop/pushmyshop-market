@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Sign In</h1>
+  <form (ngSubmit)="login()">
+    <clr-alert *ngIf="error" [clrAlertType]="alert-warning" [clrAlertAppLevel]="true">
+      <clr-alert-item>
+        <span class="alert-text">
+            Username or password is incorrect
+        </span>
+      </clr-alert-item>
+    </clr-alert>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="firstName" name="username" [(ngModel)]="customer.username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="customer.password" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Sign In</button>
+
+  </form>
+</div>

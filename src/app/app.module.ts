@@ -3,33 +3,47 @@ import { ClarityModule } from "clarity-angular";
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 import { FormsModule } from "@angular/forms";
-import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
+import {AuthGuardService} from './services/auth-guard.service'
 
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './components/customers/signup/signup.component';
+import { SigninComponent } from './components/customers/signin/signin.component';
+import { CompagniesComponent } from './components/compagnies/compagnies/compagnies.component';
 
 export const routes: Routes = [
   {
+    path: '',
+    component: SigninComponent
+  },
+  {
     path: 'signup',
     component: SignupComponent
+  },
+  {
+    path: 'compagnies',
+    component: CompagniesComponent,
+    canActivate: [AuthGuardService]
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent
+    SignupComponent,
+    SigninComponent,
+    CompagniesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ClarityModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
-    HttpClientModule
+    HttpModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
