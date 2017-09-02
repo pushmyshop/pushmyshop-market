@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Customer } from '../../../models/customer';
@@ -10,7 +10,7 @@ import { CustomerService } from '../../../services/customer.service';
   styleUrls: ['./signin.component.css'],
   providers: [CustomerService]
 })
-export class SigninComponent {
+export class SigninComponent implements OnInit {
 
 
   public customer: Customer = new Customer();
@@ -18,11 +18,25 @@ export class SigninComponent {
 
   constructor(private router: Router, private customerService: CustomerService) { }
 
+  ngOnInit() {
+    this.customerService.logout();
+  }
+
   login() {
     this.customerService.login(this.customer).subscribe(
       result => {
         if (result === true) {
-          this.router.navigate(['/compagnies']);
+          this.customerService.getCurrentUser(this.customer.username).subscribe(
+            result => {
+              if (result === true) {
+                this.router.navigate(['/compagnies']);
+              } else {
+                this.error = true;
+              }
+            },
+            error => {
+              this.error = true;
+            });
         } else {
           this.error = true;
         }
