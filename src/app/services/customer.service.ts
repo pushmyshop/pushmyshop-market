@@ -20,10 +20,9 @@ export class CustomerService {
   }
 
 
-  new(customer: Customer) {
-    this.http
-      .post('http://localhost:8080/api/customers', customer)
-      .subscribe();
+  new(customer: Customer) : Observable<Response> {
+    return this.http
+      .post('http://localhost:8080/api/customers', customer);
   }
 
   logout() {

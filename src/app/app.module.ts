@@ -12,7 +12,8 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './components/customers/signup/signup.component';
 import { SigninComponent } from './components/customers/signin/signin.component';
 import { CompagniesComponent } from './components/compagnies/compagnies/compagnies.component';
-
+import { ProductsComponent } from './components/products/products/products.component';
+import { CompagnyComponent } from './components/compagnies/compagny/compagny.component';
 export const routes: Routes = [
   {
     path: '',
@@ -34,7 +35,9 @@ export const routes: Routes = [
     AppComponent,
     SignupComponent,
     SigninComponent,
-    CompagniesComponent
+    CompagniesComponent,
+    ProductsComponent,
+    CompagnyComponent
   ],
   imports: [
     BrowserModule,

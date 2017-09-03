@@ -1,24 +1,18 @@
-<div class="container">
-  <h1>Sign In</h1>
-  <form (ngSubmit)="login()">
-    <clr-alert *ngIf="error" [clrAlertType]="alert-warnning" [clrAlertAppLevel]="true">
-      <clr-alert-item>
-        <span class="alert-text">
-            Username or password is incorrect
-        </span>
-      </clr-alert-item>
-    </clr-alert>
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" class="form-control" id="firstName" name="username" [(ngModel)]="customer.username" required>
+<div class="login-wrapper">
+  <form class="login" (ngSubmit)="login()">
+    <label class="title">
+            <h3 class="welcome">Push my shop !</h3>
+            Welcome !
+        </label>
+    <div class="login-group">
+
+      <input class="username" type="text" id="login_username" placeholder="Username" name="username" [(ngModel)]="customer.username">
+      <input class="password" type="password" id="login_password" placeholder="Password" name="password" [(ngModel)]="customer.password">
+      <div *ngIf="error" class="error active">
+        Invalid user name or password
+      </div>
+      <button type="submit" class="btn btn-primary">SIGN IN</button>
+      <a routerLink="/signup" routerLinkActive="active" class="signup">Sign up</a>
     </div>
-
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="customer.password" required>
-    </div>
-
-    <button type="submit" class="btn btn-success">Sign In</button>
-
   </form>
 </div>

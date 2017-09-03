@@ -1,0 +1,9 @@
+.login-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: url(/assets/home.jpg);
+    background-size: cover;
+    background-position: 504px 0;
+    background-repeat: no-repeat;
+}

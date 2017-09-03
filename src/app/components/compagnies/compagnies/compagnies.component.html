@@ -1,5 +1,14 @@
 <clr-tabs>
+    <clr-tab>
+        <button clrTabLink>Add New Compagny</button>
+        <clr-tab-content *clrIfActive>
+            <app-compagny></app-compagny>
+        </clr-tab-content>
+    </clr-tab>
     <clr-tab *ngFor="let compagny of compagnies">
         <button clrTabLink>{{compagny.name}}</button>
+        <clr-tab-content *clrIfActive>
+            <app-products compagnyId={{compagny.id}}></app-products>
+        </clr-tab-content>
     </clr-tab>
 </clr-tabs>

@@ -1,0 +1,48 @@
+<clr-datagrid *ngIf="products">
+  <clr-dg-column>Name</clr-dg-column>
+  <clr-dg-column>Price</clr-dg-column>
+  <clr-dg-column>Description</clr-dg-column>
+  <clr-dg-column></clr-dg-column>
+
+  <clr-dg-row *ngFor="let product of products" [clrDgItem]="product">
+    <clr-dg-cell>
+      <input type="text" class="form-control" placeholder="Enter name of product" id="product.name" name="product.name" [(ngModel)]="product.name"
+        required></clr-dg-cell>
+    <clr-dg-cell>
+      <input type="number" maxlength="10" size="10"  class="form-control" placeholder="Enter price of product" id="product.price" name="product.price" [(ngModel)]="product.price"
+        required></clr-dg-cell>
+    <clr-dg-cell> <textarea maxlength="5" class="form-control" placeholder="Enter description of product" id="product.desc" name="product.desc"
+        [(ngModel)]="product.desc" required></textarea>
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <a (click)="save(product)" class="label label-success clickable">
+      Save
+      </a>
+      <a (click)="delete(product)" class="label label-danger clickable">
+      Delete
+      </a>
+    </clr-dg-cell>
+
+  </clr-dg-row>
+  <clr-dg-row>
+    <clr-dg-cell>
+      <input type="text" class="form-control" placeholder="Enter name of product" id="name" name="name" [(ngModel)]="newProduct.name"
+        required>
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <input type="number" class="form-control" placeholder="Enter price of product" id="price" name="price" [(ngModel)]="newProduct.price"
+        required>
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <textarea maxlength="3" class="form-control" placeholder="Enter description of product" id="desc" name="desc" [(ngModel)]="newProduct.desc"
+        required></textarea>
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <a (click)="new(newProduct)" class="label label-success clickable">
+      Save
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer>{{products.length}} users</clr-dg-footer>
+</clr-datagrid>
