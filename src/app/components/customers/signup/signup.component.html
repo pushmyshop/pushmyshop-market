@@ -5,14 +5,15 @@
             Create new account
         </label>
     <div class="login-group">
-      <input type="text" class="username" placeholder="First name" id="firstName" name="firstName" [(ngModel)]="customer.firstName"
+      <input type="text" autocomplete="off" class="username" placeholder="First name" id="firstName" name="firstName" [(ngModel)]="customer.firstName"
         required>
-      <input type="text" class="username" placeholder="Last name" id="lastName" name="lastName" [(ngModel)]="customer.lastName"
+      <input type="text" autocomplete="off" class="username" placeholder="Last name" id="lastName" name="lastName" [(ngModel)]="customer.lastName"
         required>
-      <input type="email" class="username" placeholder="Mail" id="mail" name="mail" [(ngModel)]="customer.mail" required>
-      <input type="text" class="username" placeholder="Username" id="username" name="username" [(ngModel)]="customer.username"
+      <input type="email" autocomplete="off" class="username" placeholder="Mail" id="mail" name="mail" [(ngModel)]="customer.mail"
         required>
-      <input type="password" class="password" placeholder="Password" id="password" name="password" [(ngModel)]="customer.password"
+      <input type="text" autocomplete="off" class="username" placeholder="Username" id="username" name="username" [(ngModel)]="customer.username"
+        required>
+      <input type="password" autocomplete="off" class="password" placeholder="Password" id="password" name="password" [(ngModel)]="customer.password"
         required>
       <button type="submit" class="btn btn-primary">SAVE</button>
       <a routerLink="/" routerLinkActive="active" class="signup">Back</a>

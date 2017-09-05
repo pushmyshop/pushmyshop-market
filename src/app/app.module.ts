@@ -14,6 +14,12 @@ import { SigninComponent } from './components/customers/signin/signin.component'
 import { CompagniesComponent } from './components/compagnies/compagnies/compagnies.component';
 import { ProductsComponent } from './components/products/products/products.component';
 import { CompagnyComponent } from './components/compagnies/compagny/compagny.component';
+import { ProductComponent } from './components/products/product/product.component';
+import { EventsComponent } from './components/events/events/events.component';
+
+import 'clarity-icons';
+import 'clarity-icons/shapes/all-shapes';
+
 export const routes: Routes = [
   {
     path: '',
@@ -37,7 +43,9 @@ export const routes: Routes = [
     SigninComponent,
     CompagniesComponent,
     ProductsComponent,
-    CompagnyComponent
+    CompagnyComponent,
+    ProductComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,

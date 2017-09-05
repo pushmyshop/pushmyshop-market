@@ -1,0 +1,33 @@
+<clr-dg-row [clrDgItem]="product">
+  <clr-dg-cell>
+    <input type="text" class="form-control" placeholder="Enter name of product" id="product.name" name="product.name" [(ngModel)]="product.name"
+      required>
+  </clr-dg-cell>
+  <clr-dg-cell>
+    <input type="number" maxlength="10" size="10" class="form-control" placeholder="Enter price of product" id="product.price"
+      name="product.price" [(ngModel)]="product.price" required>
+  </clr-dg-cell>
+  <clr-dg-cell> <textarea class="form-control" placeholder="Enter description of product" id="product.desc" name="product.desc"
+      [(ngModel)]="product.desc" required></textarea>
+  </clr-dg-cell>
+  <clr-dg-cell>
+    <div *ngIf="product.id !== undifined;then update else create">
+    </div>
+  </clr-dg-cell>
+
+</clr-dg-row>
+
+<ng-template #update>
+  <a (click)="save(product)" class="label label-success clickable">
+      Save
+      </a>
+  <a (click)="delete(product)" class="label label-danger clickable">
+      Delete
+      </a>
+</ng-template>
+
+<ng-template #create>
+  <a (click)="new()" class="label label-success clickable">
+      Create
+      </a>
+</ng-template>

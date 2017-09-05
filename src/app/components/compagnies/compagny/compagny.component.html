@@ -3,9 +3,20 @@
   <form (ngSubmit)="new()">
     <div class="form-group">
       <label for="name">Name of your compagny</label>
-      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="compagny.name" required>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="compagny.name" required autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="templates">Template for your compagny</label>
+      <div class="select">
+        <select id="templates" name="template" [(ngModel)]="compagny.template" required>
+          <option value="">Please Select</option>
+          <option value="pizzeria">Pizzeria</option>
+          <option value="cafeteria">Cafeteria</option>
+
+          <option  *ngFor="let template of templates"  [ngValue]="template">{{template.name}}</option>
+        </select>
+      </div>
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
-
   </form>
 </div>

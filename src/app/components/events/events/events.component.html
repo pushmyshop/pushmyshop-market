@@ -1,0 +1,24 @@
+<h2>Events</h2>
+<clr-alert *ngIf="updateSiteWebMessage" [clrAlertType]="'alert-success'">
+  <div class="alert-item">
+    <span class="alert-text">
+            You have just regenerated your website!
+        </span>
+  </div>
+</clr-alert>
+<div class="card-columns">
+  <a (click)="generateSite()" class="card clickable">
+    <div class="card-block">
+      <p class="card-text">
+        Generate your site
+      </p>
+    </div>
+  </a>
+  <a (click)="deleteCompagny()" class="card clickable">
+    <div class="card-block">
+      <p class="card-text">
+        Delete your compagny
+      </p>
+    </div>
+  </a>
+</div>
