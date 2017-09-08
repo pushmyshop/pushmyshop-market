@@ -16,6 +16,7 @@ import { ProductsComponent } from './components/products/products/products.compo
 import { CompagnyComponent } from './components/compagnies/compagny/compagny.component';
 import { ProductComponent } from './components/products/product/product.component';
 import { EventsComponent } from './components/events/events/events.component';
+import { CartComponent } from './components/carts/carts.component';
 
 import 'clarity-icons';
 import 'clarity-icons/shapes/all-shapes';
@@ -45,7 +46,8 @@ export const routes: Routes = [
     ProductsComponent,
     CompagnyComponent,
     ProductComponent,
-    EventsComponent
+    EventsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

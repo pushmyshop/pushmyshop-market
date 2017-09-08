@@ -10,6 +10,8 @@
         <clr-tab-content *clrIfActive>
             <h2>Products</h2>
             <app-products compagnyId={{compagny.id}}></app-products>
+            <h2>Carts</h2>
+            <app-carts compagnyId={{compagny.id}}></app-carts>
             <app-events [compagny]=compagny [compagnies]=compagnies></app-events>
         </clr-tab-content>
     </clr-tab>
