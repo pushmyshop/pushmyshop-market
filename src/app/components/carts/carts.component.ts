@@ -25,4 +25,12 @@ export class CartComponent implements OnInit {
       })
   }
 
+  confirm(cart : Cart) {
+    this.cartsService.confirm(this.compagnyId, cart);
+  }
+  
+  cancel(cart : Cart) {
+    this.cartsService.cancel(this.compagnyId, cart);
+  }
+
 }

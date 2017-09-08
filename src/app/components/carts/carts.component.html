@@ -4,6 +4,7 @@
   <clr-dg-column>Picking hour</clr-dg-column>
   <clr-dg-column>Phone</clr-dg-column>
   <clr-dg-column>Products</clr-dg-column>
+  <clr-dg-column>Etat</clr-dg-column>
   <clr-dg-column></clr-dg-column>
 
   <clr-dg-row *ngFor="let cart of carts" [clrDgItem]="cart">
@@ -24,12 +25,15 @@
         {{product.name}} - {{product.price}}€ 
       </div>
     </clr-dg-cell>
+    <clr-dg-cell> 
+      {{cart.state}}
+    </clr-dg-cell>
     <clr-dg-cell>
-      <a (click)="console.log('save')" class="label label-success clickable">
-        Save
+      <a (click)="confirm(cart)" class="label label-success clickable">
+        Confirm
         </a>
-      <a (click)="console.log('Delete')" class="label label-danger clickable">
-        Delete
+      <a (click)="cancel(cart)" class="label label-danger clickable">
+        Cancel
         </a>
     </clr-dg-cell>
   
