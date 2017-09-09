@@ -7,4 +7,6 @@ export class Cart {
     pickingHour : any;
     pickingName : string;
     pickingPhone : string;
+
+    state: string;
 }

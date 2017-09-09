@@ -11,7 +11,7 @@
       [(ngModel)]="product.desc" required></textarea>
   </clr-dg-cell>
   <clr-dg-cell>
-    <div *ngIf="product.id !== undifined;then update else create">
+    <div *ngIf="!product.id;then update else create">
     </div>
   </clr-dg-cell>
 
