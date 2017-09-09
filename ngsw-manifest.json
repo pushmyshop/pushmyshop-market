@@ -1,0 +1,18 @@
+{
+    "static.ignore": [
+        "^\/assets\/ignore.*$"
+    ],
+    "routing": {
+        "index": "/index.html",
+        "routes": {
+          "/": {
+            "match": "exact"
+          },
+          "^/.*$": {
+            "match": "regex"
+          }
+        }
+      }
+     
+}
+   
