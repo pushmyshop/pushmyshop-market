@@ -20,6 +20,7 @@ import { CartComponent } from './components/carts/carts.component';
 
 import 'clarity-icons';
 import 'clarity-icons/shapes/all-shapes';
+import {PushService} from "./services/push.service";
 
 export const routes: Routes = [
   {
@@ -56,7 +57,7 @@ export const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: true }),
     HttpModule
   ],
-  providers: [AuthGuardService],
+  providers: [AuthGuardService,PushService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

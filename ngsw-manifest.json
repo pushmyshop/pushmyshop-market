@@ -12,7 +12,10 @@
             "match": "regex"
           }
         }
-      }
-     
+    },
+    "push": {
+      "showNotifications": true,
+      "backgroundOnly": false
+    }
+
 }
-   
