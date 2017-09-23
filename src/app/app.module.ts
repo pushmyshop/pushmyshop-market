@@ -21,6 +21,7 @@ import {ProductsComponent} from "./components/compagnies/compagnies/products/pro
 import {ProductComponent} from "./components/compagnies/compagnies/products/product/product.component";
 import {EventsComponent} from "./components/compagnies/compagnies/events/events/events.component";
 import {CartComponent} from "./components/compagnies/compagnies/carts/carts.component";
+import {InfosComponent} from "./components/compagnies/compagnies/infos/infos.component";
 
 export const routes: Routes = [
   {
@@ -48,7 +49,8 @@ export const routes: Routes = [
     CompagnyComponent,
     ProductComponent,
     EventsComponent,
-    CartComponent
+    CartComponent,
+    InfosComponent
   ],
   imports: [
     BrowserModule,
