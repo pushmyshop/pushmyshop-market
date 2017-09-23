@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Compagny} from "../../../../models/compagny";
 import {CompagniesService} from "../../../../services/compagnies.service";
+import {Template} from "../../../../models/template";
 
 @Component({
   selector: 'app-infos',
