@@ -7,11 +7,18 @@
     <input type="number" maxlength="10" size="10" class="form-control" placeholder="Enter price of product" id="product.price"
       name="product.price" [(ngModel)]="product.price" required>
   </clr-dg-cell>
-  <clr-dg-cell> <textarea class="form-control" placeholder="Enter description of product" id="product.desc" name="product.desc"
-      [(ngModel)]="product.desc" required></textarea>
+  <clr-dg-cell> <textarea class="form-control" placeholder="Enter description of product" id="product.desc" name="product.desc" [(ngModel)]="product.desc"
+      required></textarea>
   </clr-dg-cell>
   <clr-dg-cell>
-    <div *ngIf="!product.id;then update else create">
+    <input class="form-control" placeholder="URL of Image" id="product.image" name="product.image" [(ngModel)]="product.image"
+      required>
+  </clr-dg-cell>
+  <clr-dg-cell>
+    <img [src]="product.image">
+  </clr-dg-cell>
+  <clr-dg-cell>
+    <div *ngIf="product.id;then update else create">
     </div>
   </clr-dg-cell>
 

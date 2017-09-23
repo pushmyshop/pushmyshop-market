@@ -3,7 +3,8 @@ export class Product {
     public name: string;
     public desc: string;
     public price: number;
-
+    public image: string;
+    
     constructor(
     ) { }
 

@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Create new compagny</h1>
-  <form (ngSubmit)="new()">
+  <form (ngSubmit)="new()" #compagnyForm="ngForm">
     <div class="form-group">
       <label for="name">Name of your compagny</label>
       <input type="text" class="form-control" id="name" name="name" [(ngModel)]="compagny.name" required autocomplete="off">
@@ -17,6 +17,6 @@
         </select>
       </div>
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" [disabled]="!compagnyForm.valid" class="btn btn-success">Submit</button>
   </form>
 </div>

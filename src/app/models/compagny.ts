@@ -14,5 +14,7 @@ export class Compagny {
   public town: string;
   public telephoneNumber: string;
   public emailAdress: string;
+  public image: string;
+  public logo: string;
 
 }

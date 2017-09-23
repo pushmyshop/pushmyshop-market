@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ClarityModule } from "clarity-angular";
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import {AuthGuardService} from './services/auth-guard.service'
+import { AuthGuardService } from './services/auth-guard.service'
 
 
 import { AppComponent } from './app.component';
@@ -16,12 +16,15 @@ import { CompagnyComponent } from './components/compagnies/compagny/compagny.com
 
 import 'clarity-icons';
 import 'clarity-icons/shapes/all-shapes';
-import {PushService} from "./services/push.service";
-import {ProductsComponent} from "./components/compagnies/compagnies/products/products/products.component";
-import {ProductComponent} from "./components/compagnies/compagnies/products/product/product.component";
-import {EventsComponent} from "./components/compagnies/compagnies/events/events/events.component";
-import {CartComponent} from "./components/compagnies/compagnies/carts/carts.component";
-import {InfosComponent} from "./components/compagnies/compagnies/infos/infos.component";
+import { PushService } from "./services/push.service";
+import { ProductsComponent } from "./components/compagnies/compagnies/products/products/products.component";
+import { ProductComponent } from "./components/compagnies/compagnies/products/product/product.component";
+import { EventsComponent } from "./components/compagnies/compagnies/events/events/events.component";
+import { CartComponent } from "./components/compagnies/compagnies/carts/carts.component";
+import { InfosComponent } from "./components/compagnies/compagnies/infos/infos.component";
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { OrdersComponent } from './components/dashboard/orders/orders.component';
+import { StoresComponent } from './components/dashboard/stores/stores.component';
 
 export const routes: Routes = [
   {
@@ -35,6 +38,16 @@ export const routes: Routes = [
   {
     path: 'compagnies',
     component: CompagniesComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'stores',
+    component: StoresComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'orders',
+    component: OrdersComponent,
     canActivate: [AuthGuardService]
   }
 ]
@@ -50,16 +63,20 @@ export const routes: Routes = [
     ProductComponent,
     EventsComponent,
     CartComponent,
-    InfosComponent
+    InfosComponent,
+    NavbarComponent,
+    OrdersComponent,
+    StoresComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     ClarityModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
     HttpModule
   ],
-  providers: [AuthGuardService,PushService],
+  providers: [AuthGuardService, PushService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

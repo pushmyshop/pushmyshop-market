@@ -1,0 +1,24 @@
+<header class="header-4">
+  <div class="branding">
+    <a routerLink="/" class="nav-link">
+      <clr-icon shape="shopping-cart" class="is-inverse"></clr-icon>
+      <span class="title">{{title}}!</span>
+    </a>
+  </div>
+  <div class="header-nav">
+    <a routerLink="/compagnies" *ngIf="isAuth===true" routerLinkActive="active" class="nav-link nav-text">
+      <clr-icon shape="store"></clr-icon>
+    </a>
+    <a routerLink="/stores" *ngIf="isAuth===true" routerLinkActive="active" class="nav-link nav-text">
+      <clr-icon shape="shopping-bag"></clr-icon>
+    </a>
+    <a routerLink="/orders" *ngIf="isAuth===true" routerLinkActive="active" class="nav-link nav-text">
+      <clr-icon shape="pinboard"></clr-icon>
+    </a>
+  </div>
+  <div class="header-actions">
+    <a routerLink="/" *ngIf="isAuth===true" routerLinkActive="active" class="nav-link nav-text">
+        Log Out
+    </a>
+  </div>
+</header>

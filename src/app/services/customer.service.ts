@@ -4,6 +4,7 @@ import { Headers, RequestOptions } from '@angular/http';
 import { Customer } from '../models/customer'
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
+import { AuthGuardService } from './auth-guard.service';
 
 @Injectable()
 export class CustomerService {
@@ -11,25 +12,24 @@ export class CustomerService {
   public token: string;
   public customer: Customer;
 
-  constructor(private http: Http) {
+  constructor(private http: Http, public authGuardService: AuthGuardService) {
     var currentToken = JSON.parse(localStorage.getItem('currentToken'));
     var currentUser = JSON.parse(localStorage.getItem('currentCustomer'));
     this.token = currentToken && currentToken.token;
     this.customer = currentUser && currentUser.customer;
-
   }
 
 
-  new(customer: Customer) : Observable<Response> {
+  new(customer: Customer): Observable<Response> {
     return this.http
       .post('http://localhost:8080/api/customers', customer);
   }
 
   logout() {
+    this.authGuardService.setAuth(false);
     localStorage.removeItem('currentToken');
     localStorage.removeItem('currentCustomer');
   }
-
 
   getCurrentUser(username: String): Observable<Boolean> {
     let headers = new Headers({ 'Authorization': this.token });
@@ -55,6 +55,7 @@ export class CustomerService {
         if (tokenResponse) {
           this.token = tokenResponse;
           localStorage.setItem('currentToken', JSON.stringify({ token: tokenResponse }));
+          this.authGuardService.setAuth(true);
           return true;
         } else {
           return false;

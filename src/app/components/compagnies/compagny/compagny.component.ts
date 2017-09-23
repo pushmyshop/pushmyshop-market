@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Compagny } from '../../../models/compagny';
 import { Template } from '../../../models/template';
@@ -19,6 +20,8 @@ export class CompagnyComponent implements OnInit {
 
   constructor(private router: Router, private compagniesService: CompagniesService) {
   }
+
+
 
   ngOnInit() {
   }

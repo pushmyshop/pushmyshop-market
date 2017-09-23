@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { Customer } from '../../../models/customer';
 import { CustomerService } from '../../../services/customer.service';
+import { NavbarComponent } from '../../navbar/navbar.component'
 
 @Component({
   selector: 'app-signin',

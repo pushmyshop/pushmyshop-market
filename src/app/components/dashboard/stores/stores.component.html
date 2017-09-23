@@ -1,0 +1,9 @@
+<clr-tabs>
+    <clr-tab *ngFor="let compagny of compagnies">
+        <button clrTabLink>{{compagny.name}}</button>
+        <clr-tab-content *clrIfActive>      
+            <h2>Products</h2>
+            <app-products compagnyId={{compagny.id}}></app-products>          
+        </clr-tab-content>
+    </clr-tab>
+</clr-tabs>

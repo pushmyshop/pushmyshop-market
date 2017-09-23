@@ -1,5 +1,5 @@
 <div class="login-wrapper">
-  <form class="login" (ngSubmit)="new()">
+  <form class="login" (ngSubmit)="new()" #loginForm="ngForm">
     <label class="title">
             <h3 class="welcome">Push my shop !</h3>
             Create new account
@@ -10,12 +10,12 @@
       <input type="text" autocomplete="off" class="username" placeholder="Last name" id="lastName" name="lastName" [(ngModel)]="customer.lastName"
         required>
       <input type="email" autocomplete="off" class="username" placeholder="Mail" id="mail" name="mail" [(ngModel)]="customer.mail"
-        required>
+        required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
       <input type="text" autocomplete="off" class="username" placeholder="Username" id="username" name="username" [(ngModel)]="customer.username"
         required>
       <input type="password" autocomplete="off" class="password" placeholder="Password" id="password" name="password" [(ngModel)]="customer.password"
         required>
-      <button type="submit" class="btn btn-primary">SAVE</button>
+      <button type="submit" [disabled]="!loginForm.valid"  class="btn btn-primary">SAVE</button>
       <a routerLink="/" routerLinkActive="active" class="signup">Back</a>
 
     </div>

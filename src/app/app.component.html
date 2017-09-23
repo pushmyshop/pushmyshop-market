@@ -1,16 +1,5 @@
 <div class="main-container">
-  <header class="header header-2">
-    <div class="branding">
-      <a href="..." class="nav-link">
-        <clr-icon shape="store" class="is-solid is-highlight is-inverse"></clr-icon>
-        <span class="title">{{title}}!</span>
-      </a>
-    </div>
-    <div class="header-nav">
-      <a routerLink="/" routerLinkActive="active" class="nav-link nav-text">Home</a>
-      <a routerLink="/compagnies" routerLinkActive="active" class="nav-link nav-text">Compagnies</a>
-    </div>
-  </header>
+  <app-navbar></app-navbar>
   <div class="content-container">
     <div class="content-area">
       <router-outlet></router-outlet>
