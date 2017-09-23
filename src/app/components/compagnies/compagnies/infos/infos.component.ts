@@ -15,4 +15,12 @@ export class InfosComponent implements OnInit {
   ngOnInit() {
   }
 
+  update() {
+    this.compagniesService.update(this.compagny).subscribe(compagny => { },
+        error => {
+          console.log(error);
+        }
+    );
+  }
+
 }
