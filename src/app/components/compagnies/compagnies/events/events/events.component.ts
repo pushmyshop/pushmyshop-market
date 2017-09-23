@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Compagny } from '../../../models/compagny';
-import { CompagniesService } from '../../../services/compagnies.service'
 import { AlertIconAndTypesService } from 'clarity-angular/emphasis/alert/providers/icon-and-types-service';
+import {Compagny} from "../../../../../models/compagny";
+import {CompagniesService} from "../../../../../services/compagnies.service";
 
 @Component({
   selector: 'app-events',

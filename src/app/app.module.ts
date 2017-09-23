@@ -12,15 +12,15 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './components/customers/signup/signup.component';
 import { SigninComponent } from './components/customers/signin/signin.component';
 import { CompagniesComponent } from './components/compagnies/compagnies/compagnies.component';
-import { ProductsComponent } from './components/products/products/products.component';
 import { CompagnyComponent } from './components/compagnies/compagny/compagny.component';
-import { ProductComponent } from './components/products/product/product.component';
-import { EventsComponent } from './components/events/events/events.component';
-import { CartComponent } from './components/carts/carts.component';
 
 import 'clarity-icons';
 import 'clarity-icons/shapes/all-shapes';
 import {PushService} from "./services/push.service";
+import {ProductsComponent} from "./components/compagnies/compagnies/products/products/products.component";
+import {ProductComponent} from "./components/compagnies/compagnies/products/product/product.component";
+import {EventsComponent} from "./components/compagnies/compagnies/events/events/events.component";
+import {CartComponent} from "./components/compagnies/compagnies/carts/carts.component";
 
 export const routes: Routes = [
   {
