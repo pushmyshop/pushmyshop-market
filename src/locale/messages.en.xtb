@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE translationbundle [
+<!ELEMENT translationbundle (translation)*>
+<!ATTLIST translationbundle lang CDATA #REQUIRED>
+
+<!ELEMENT translation (#PCDATA|ph)*>
+<!ATTLIST translation id CDATA #REQUIRED>
+<!ATTLIST translation desc CDATA #IMPLIED>
+<!ATTLIST translation meaning CDATA #IMPLIED>
+<!ATTLIST translation xml:space (default|preserve) "default">
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<translationbundle lang="en">
+  <translation id="5299560890296575191">
+            <ph name="START_HEADING_LEVEL3"><ex>&lt;h3&gt;</ex></ph>Push my shop !<ph name="CLOSE_HEADING_LEVEL3"><ex>&lt;/h3&gt;</ex></ph>
+            Create new account
+        </translation>
+  <translation id="6671956963490165282">SAVE</translation>
+  <translation id="8890553633144307762">Back</translation>
+  <translation id="5342432350421167093">First Name</translation>
+  <translation id="3586674587150281199">Last Name</translation>
+  <translation id="1292737233370901804">Mail</translation>
+  <translation id="5248717555542428023">Username</translation>
+  <translation id="1431416938026210429">Password</translation>
+  
+  <translation id="8962082264115936755">Enter name of product</translation>
+  <translation id="2747136358508731677">Enter price of product</translation>
+    <translation id="3458009144609116398">Enter description of product</translation>
+    <translation id="1090565968991506443">URL of Image</translation>
+    <translation id="5228539509337329773">URL of your logo</translation>
+    <translation id="2858653921642413776">URL of your header</translation>
+
+  <translation id="3481401223062949532">
+            <ph name="START_HEADING_LEVEL3"><ex>&lt;h3&gt;</ex></ph>Push my shop !<ph name="CLOSE_HEADING_LEVEL3"><ex>&lt;/h3&gt;</ex></ph>
+            Welcome !
+        </translation>
+  <translation id="3096892796350245141">SIGN IN</translation>
+  <translation id="7028204981963450021">Sign up</translation>
+  <translation id="4986241120256089703">Add New Compagny</translation>
+  <translation id="5148916028088347449">Informations</translation>
+  <translation id="9143345124749871783">Create new compagny</translation>
+  <translation id="8691801857677131749">Name of your compagny</translation>
+  <translation id="2508888016295591797">Template for your compagny</translation>
+  <translation id="921109857758166977">Please Select</translation>
+  <translation id="337721280918069430">Pizzeria</translation>
+  <translation id="7819476999855118015">Cafeteria</translation>
+  <translation id="935187492052582731">Submit</translation>
+  <translation id="8953033926734869941">Name</translation>
+  <translation id="8894377483833272091">Price</translation>
+  <translation id="4902817035128594900">Description</translation>
+  <translation id="2375260419993138758">URL</translation>
+  <translation id="3012906865384504293">Image</translation>
+  <translation id="7169240609130007064">
+      Save
+      </translation>
+  <translation id="4841452793856066974">
+      Delete
+      </translation>
+  <translation id="5947686242111824671">
+      Create
+      </translation>
+  <translation id="5729418620241283277">Events</translation>
+  <translation id="4003238758809312102">
+            You have just regenerated your website!
+        </translation>
+  <translation id="7790200452828191921">
+        Generate your site
+      </translation>
+  <translation id="6507308556557637819">
+        Delete your compagny
+      </translation>
+  <translation id="8271512338928242088">Picking date</translation>
+  <translation id="8222894352295555984">Picking hour</translation>
+  <translation id="3262236020277300799">Phone</translation>
+  <translation id="6707361102856436710">Products</translation>
+  <translation id="8349442718811603678">Etat</translation>
+  <translation id="2869547755791276483"><ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> carts
+  </translation>
+  <translation id="6304432362546770951">Address</translation>
+  <translation id="7450324673386885301">Postal code</translation>
+  <translation id="7292385072831767044">Town</translation>
+  <translation id="165594150671707240">Telephone number</translation>
+  <translation id="3967269098753656610">Email address</translation>
+  <translation id="5341491124628154669">Web page tilte</translation>
+  <translation id="1690088364488416785">Web page sub tilte</translation>
+  <translation id="7231401136333776153">Logo of your compagny</translation>
+  <translation id="1374904942925221139">Image of the header on the Web page</translation>
+  <translation id="4708358419347650119">Carts</translation>
+</translationbundle>

@@ -1,7 +1,7 @@
-<h2>Events</h2>
+<h2 i18n>Events</h2>
 <clr-alert *ngIf="updateSiteWebMessage" [clrAlertType]="'alert-success'">
   <div class="alert-item">
-    <span class="alert-text">
+    <span class="alert-text" i18n>
             You have just regenerated your website!
         </span>
   </div>
@@ -9,14 +9,14 @@
 <div class="card-columns">
   <a (click)="generateSite()" class="card clickable">
     <div class="card-block">
-      <p class="card-text">
+      <p class="card-text" i18n>
         Generate your site
       </p>
     </div>
   </a>
   <a (click)="deleteCompagny()" class="card clickable">
     <div class="card-block">
-      <p class="card-text">
+      <p class="card-text" i18n>
         Delete your compagny
       </p>
     </div>

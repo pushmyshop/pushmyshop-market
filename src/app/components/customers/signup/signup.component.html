@@ -1,22 +1,22 @@
 <div class="login-wrapper">
   <form class="login" (ngSubmit)="new()" #loginForm="ngForm">
-    <label class="title">
+    <label i18n class="title">
             <h3 class="welcome">Push my shop !</h3>
             Create new account
         </label>
     <div class="login-group">
-      <input type="text" autocomplete="off" class="username" placeholder="First name" id="firstName" name="firstName" [(ngModel)]="customer.firstName"
+      <input type="text" autocomplete="off" class="username"  placeholder="First name" i18n-placeholder="First name" id="firstName" name="firstName" [(ngModel)]="customer.firstName"
         required>
-      <input type="text" autocomplete="off" class="username" placeholder="Last name" id="lastName" name="lastName" [(ngModel)]="customer.lastName"
+      <input type="text" autocomplete="off" class="username" placeholder="Last name" i18n-placeholder="Last name" id="lastName" name="lastName" [(ngModel)]="customer.lastName"
         required>
-      <input type="email" autocomplete="off" class="username" placeholder="Mail" id="mail" name="mail" [(ngModel)]="customer.mail"
+      <input type="email" autocomplete="off" class="username" i18n-placeholder="Mail" placeholder="Mail" id="mail" name="mail" [(ngModel)]="customer.mail"
         required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
-      <input type="text" autocomplete="off" class="username" placeholder="Username" id="username" name="username" [(ngModel)]="customer.username"
+      <input type="text" autocomplete="off" class="username" i18n-placeholder="Username" placeholder="Username" id="username" name="username" [(ngModel)]="customer.username"
         required>
-      <input type="password" autocomplete="off" class="password" placeholder="Password" id="password" name="password" [(ngModel)]="customer.password"
+      <input type="password" autocomplete="off" class="password" i18n-placeholder="Password" placeholder="Password" id="password" name="password" [(ngModel)]="customer.password"
         required>
-      <button type="submit" [disabled]="!loginForm.valid"  class="btn btn-primary">SAVE</button>
-      <a routerLink="/" routerLinkActive="active" class="signup">Back</a>
+      <button type="submit" [disabled]="!loginForm.valid"  class="btn btn-primary" i18n>SAVE</button>
+      <a routerLink="/" routerLinkActive="active" class="signup" i18n>Back</a>
 
     </div>
   </form>

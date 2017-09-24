@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="5299560890296575191"><source>app/components/customers/signup/signup.component.ts:3,6</source>
+            <ph name="START_HEADING_LEVEL3"><ex>&lt;h3&gt;</ex></ph>Push my shop !<ph name="CLOSE_HEADING_LEVEL3"><ex>&lt;/h3&gt;</ex></ph>
+            Create new account
+        </msg>
+  <msg id="5342432350421167093" desc="First name"><source>app/components/customers/signup/signup.component.ts:8</source>First name</msg>
+  <msg id="3586674587150281199" desc="Last name"><source>app/components/customers/signup/signup.component.ts:10</source>Last name</msg>
+  <msg id="1292737233370901804" desc="Mail"><source>app/components/customers/signup/signup.component.ts:12</source>Mail</msg>
+  <msg id="5248717555542428023" desc="Username"><source>app/components/customers/signup/signup.component.ts:14</source><source>app/components/customers/signin/signin.component.ts:9</source>Username</msg>
+  <msg id="1431416938026210429" desc="Password"><source>app/components/customers/signup/signup.component.ts:16</source><source>app/components/customers/signin/signin.component.ts:11</source>Password</msg>
+  <msg id="6671956963490165282"><source>app/components/customers/signup/signup.component.ts:18</source>SAVE</msg>
+  <msg id="8890553633144307762"><source>app/components/customers/signup/signup.component.ts:19</source>Back</msg>
+  <msg id="3481401223062949532"><source>app/components/customers/signin/signin.component.ts:3,6</source>
+            <ph name="START_HEADING_LEVEL3"><ex>&lt;h3&gt;</ex></ph>Push my shop !<ph name="CLOSE_HEADING_LEVEL3"><ex>&lt;/h3&gt;</ex></ph>
+            Welcome !
+        </msg>
+  <msg id="3096892796350245141"><source>app/components/customers/signin/signin.component.ts:16</source>SIGN IN</msg>
+  <msg id="7028204981963450021"><source>app/components/customers/signin/signin.component.ts:17</source>Sign up</msg>
+  <msg id="4986241120256089703"><source>app/components/compagnies/compagnies/compagnies.component.ts:3</source>Add New Compagny</msg>
+  <msg id="5148916028088347449"><source>app/components/compagnies/compagnies/compagnies.component.ts:11</source>Informations</msg>
+  <msg id="9143345124749871783"><source>app/components/compagnies/compagny/compagny.component.ts:2</source>Create new compagny</msg>
+  <msg id="8691801857677131749"><source>app/components/compagnies/compagny/compagny.component.ts:5</source><source>app/components/compagnies/compagnies/infos/infos.component.ts:4</source>Name of your compagny</msg>
+  <msg id="2508888016295591797"><source>app/components/compagnies/compagny/compagny.component.ts:9</source><source>app/components/compagnies/compagnies/infos/infos.component.ts:8</source>Template for your compagny</msg>
+  <msg id="921109857758166977"><source>app/components/compagnies/compagny/compagny.component.ts:12</source><source>app/components/compagnies/compagnies/infos/infos.component.ts:11</source>Please Select</msg>
+  <msg id="337721280918069430"><source>app/components/compagnies/compagny/compagny.component.ts:13</source><source>app/components/compagnies/compagnies/infos/infos.component.ts:12</source>Pizzeria</msg>
+  <msg id="7819476999855118015"><source>app/components/compagnies/compagny/compagny.component.ts:14</source><source>app/components/compagnies/compagnies/infos/infos.component.ts:13</source>Cafeteria</msg>
+  <msg id="935187492052582731"><source>app/components/compagnies/compagny/compagny.component.ts:20</source><source>app/components/compagnies/compagnies/infos/infos.component.ts:81</source>Submit</msg>
+  <msg id="8953033926734869941"><source>app/components/compagnies/compagnies/products/products/products.component.ts:2</source><source>app/components/compagnies/compagnies/carts/carts.component.ts:2</source>Name</msg>
+  <msg id="8894377483833272091"><source>app/components/compagnies/compagnies/products/products/products.component.ts:3</source>Price</msg>
+  <msg id="4902817035128594900"><source>app/components/compagnies/compagnies/products/products/products.component.ts:4</source>Description</msg>
+  <msg id="2375260419993138758"><source>app/components/compagnies/compagnies/products/products/products.component.ts:5</source>URL</msg>
+  <msg id="3012906865384504293"><source>app/components/compagnies/compagnies/products/products/products.component.ts:6</source>Image</msg>
+  <msg id="8962082264115936755" desc="Enter name of product"><source>app/components/compagnies/compagnies/products/product/product.component.ts:3</source>Enter name of product</msg>
+  <msg id="2747136358508731677" desc="Enter price of product"><source>app/components/compagnies/compagnies/products/product/product.component.ts:7</source>Enter price of product</msg>
+  <msg id="3458009144609116398" desc="Enter description of product"><source>app/components/compagnies/compagnies/products/product/product.component.ts:10</source>Enter description of product</msg>
+  <msg id="1090565968991506443" desc="URL of Image"><source>app/components/compagnies/compagnies/products/product/product.component.ts:14</source>URL of Image</msg>
+  <msg id="7169240609130007064"><source>app/components/compagnies/compagnies/products/product/product.component.ts:28,30</source>
+      Save
+      </msg>
+  <msg id="4841452793856066974"><source>app/components/compagnies/compagnies/products/product/product.component.ts:31,33</source>
+      Delete
+      </msg>
+  <msg id="5947686242111824671"><source>app/components/compagnies/compagnies/products/product/product.component.ts:37,39</source>
+      Create
+      </msg>
+  <msg id="5729418620241283277"><source>app/components/compagnies/compagnies/events/events/events.component.ts:1</source>Events</msg>
+  <msg id="4003238758809312102"><source>app/components/compagnies/compagnies/events/events/events.component.ts:4,6</source>
+            You have just regenerated your website!
+        </msg>
+  <msg id="7790200452828191921"><source>app/components/compagnies/compagnies/events/events/events.component.ts:12,14</source>
+        Generate your site
+      </msg>
+  <msg id="6507308556557637819"><source>app/components/compagnies/compagnies/events/events/events.component.ts:19,21</source>
+        Delete your compagny
+      </msg>
+  <msg id="8271512338928242088"><source>app/components/compagnies/compagnies/carts/carts.component.ts:3</source>Picking date</msg>
+  <msg id="8222894352295555984"><source>app/components/compagnies/compagnies/carts/carts.component.ts:4</source>Picking hour</msg>
+  <msg id="3262236020277300799"><source>app/components/compagnies/compagnies/carts/carts.component.ts:5</source>Phone</msg>
+  <msg id="6707361102856436710"><source>app/components/compagnies/compagnies/carts/carts.component.ts:6</source><source>app/components/dashboard/stores/stores.component.ts:5</source>Products</msg>
+  <msg id="8349442718811603678"><source>app/components/compagnies/compagnies/carts/carts.component.ts:7</source>Etat</msg>
+  <msg id="2869547755791276483"><source>app/components/compagnies/compagnies/carts/carts.component.ts:42,43</source><ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> carts
+  </msg>
+  <msg id="6304432362546770951"><source>app/components/compagnies/compagnies/infos/infos.component.ts:18</source>Address</msg>
+  <msg id="7450324673386885301"><source>app/components/compagnies/compagnies/infos/infos.component.ts:25</source>Postal code</msg>
+  <msg id="7292385072831767044"><source>app/components/compagnies/compagnies/infos/infos.component.ts:30</source>Town</msg>
+  <msg id="165594150671707240"><source>app/components/compagnies/compagnies/infos/infos.component.ts:34</source>Telephone number</msg>
+  <msg id="3967269098753656610"><source>app/components/compagnies/compagnies/infos/infos.component.ts:39</source>Email address</msg>
+  <msg id="5341491124628154669"><source>app/components/compagnies/compagnies/infos/infos.component.ts:44</source>Web page tilte</msg>
+  <msg id="1690088364488416785"><source>app/components/compagnies/compagnies/infos/infos.component.ts:48</source>Web page sub tilte</msg>
+  <msg id="7231401136333776153"><source>app/components/compagnies/compagnies/infos/infos.component.ts:57</source>Logo of your compagny</msg>
+  <msg id="5228539509337329773" desc="URL of your logo"><source>app/components/compagnies/compagnies/infos/infos.component.ts:63</source>URL of your logo</msg>
+  <msg id="1374904942925221139"><source>app/components/compagnies/compagnies/infos/infos.component.ts:69</source>Image of the header on the Web page</msg>
+  <msg id="2858653921642413776" desc="URL of your header"><source>app/components/compagnies/compagnies/infos/infos.component.ts:75</source>URL of your header</msg>
+  <msg id="4708358419347650119"><source>app/components/dashboard/orders/orders.component.ts:5</source>Carts</msg>
+</messagebundle>

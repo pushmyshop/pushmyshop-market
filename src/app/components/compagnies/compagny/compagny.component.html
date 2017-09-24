@@ -1,22 +1,22 @@
 <div class="container">
-  <h1>Create new compagny</h1>
+  <h1 i18n>Create new compagny</h1>
   <form (ngSubmit)="new()" #compagnyForm="ngForm">
     <div class="form-group">
-      <label for="name">Name of your compagny</label>
+      <label for="name" i18n>Name of your compagny</label>
       <input type="text" class="form-control" id="name" name="name" [(ngModel)]="compagny.name" required autocomplete="off">
     </div>
     <div class="form-group">
-      <label for="templates">Template for your compagny</label>
+      <label for="templates" i18n>Template for your compagny</label>
       <div class="select">
         <select id="templates" name="template" [(ngModel)]="compagny.template" required>
-          <option value="">Please Select</option>
-          <option value="pizzeria">Pizzeria</option>
-          <option value="cafeteria">Cafeteria</option>
+          <option value="" i18n>Please Select</option>
+          <option value="pizzeria" i18n>Pizzeria</option>
+          <option value="cafeteria" i18n>Cafeteria</option>
 
           <option  *ngFor="let template of templates"  [ngValue]="template">{{template.name}}</option>
         </select>
       </div>
     </div>
-    <button type="submit" [disabled]="!compagnyForm.valid" class="btn btn-success">Submit</button>
+    <button type="submit" [disabled]="!compagnyForm.valid" class="btn btn-success" i18n>Submit</button>
   </form>
 </div>

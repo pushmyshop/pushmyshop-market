@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE translationbundle [
+<!ELEMENT translationbundle (translation)*>
+<!ATTLIST translationbundle lang CDATA #REQUIRED>
+
+<!ELEMENT translation (#PCDATA|ph)*>
+<!ATTLIST translation id CDATA #REQUIRED>
+<!ATTLIST translation desc CDATA #IMPLIED>
+<!ATTLIST translation meaning CDATA #IMPLIED>
+<!ATTLIST translation xml:space (default|preserve) "default">
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<translationbundle lang="fr">
+  <translation id="5299560890296575191">           <ph name="START_HEADING_LEVEL3"><ex>&lt;h3&gt;</ex></ph>Push my shop !<ph name="CLOSE_HEADING_LEVEL3"><ex>&lt;/h3&gt;</ex></ph>
+            Créer un nouveau compte
+</translation>
+  <translation id="6671956963490165282">Sauvegarder</translation>
+  <translation id="8890553633144307762">Retour</translation>
+  <translation id="3481401223062949532">            <ph name="START_HEADING_LEVEL3"><ex>&lt;h3&gt;</ex></ph>Push my shop !<ph name="CLOSE_HEADING_LEVEL3"><ex>&lt;/h3&gt;</ex></ph>
+            Bonjour !
+</translation>
+  <translation id="5342432350421167093">Prénom</translation>
+  <translation id="3586674587150281199">Nom</translation>
+  <translation id="1292737233370901804">Mail</translation>
+  <translation id="5248717555542428023">Identifiant</translation>
+  <translation id="1431416938026210429">Mot de passe</translation>
+  
+  <translation id="8962082264115936755">Nom du produit</translation>
+  <translation id="2747136358508731677">Prix du produit</translation>
+    <translation id="3458009144609116398">Description du produit</translation>
+    <translation id="1090565968991506443">URL de l'image</translation>·
+    <translation id="5228539509337329773">URL de l'image de votre logo</translation>
+    <translation id="2858653921642413776">URL de l'image principale sur votre site</translation>
+
+
+  <translation id="3096892796350245141">Se connecter</translation>
+  <translation id="7028204981963450021">S&apos;enregistrer</translation>
+  <translation id="4986241120256089703">Ajouter une nouvelle société</translation>
+  <translation id="5148916028088347449">Informations</translation>
+  <translation id="9143345124749871783">Créer une nouvelle société</translation>
+  <translation id="8691801857677131749">Nom de la société</translation>
+  <translation id="2508888016295591797">Template de la société</translation>
+  <translation id="921109857758166977">Sélectionner</translation>
+  <translation id="337721280918069430">Pizzeria</translation>
+  <translation id="7819476999855118015">Caféteria</translation>
+  <translation id="935187492052582731">Créer</translation>
+  <translation id="8953033926734869941">Nom</translation>
+  <translation id="8894377483833272091">Prix</translation>
+  <translation id="4902817035128594900">Déscription</translation>
+  <translation id="2375260419993138758">URL</translation>
+  <translation id="3012906865384504293">Image</translation>
+  <translation id="7169240609130007064">Sauvegarder</translation>
+  <translation id="4841452793856066974">Supprimer</translation>
+  <translation id="5947686242111824671">Créer</translation>
+  <translation id="5729418620241283277">Evénements</translation>
+  <translation id="4003238758809312102">
+            Vous venez de créer votre site !
+</translation>
+  <translation id="7790200452828191921">        Créer votre site
+</translation>
+  <translation id="6507308556557637819">Supprimer votre société</translation>
+  <translation id="8271512338928242088">Date de retrait</translation>
+  <translation id="8222894352295555984">Heure de retrait</translation>
+  <translation id="3262236020277300799">Téléphone</translation>
+  <translation id="6707361102856436710">Produits</translation>
+  <translation id="8349442718811603678">Etat</translation>
+  <translation id="2869547755791276483">
+ <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> commandes
+</translation>
+  <translation id="6304432362546770951">Adresse</translation>
+  <translation id="7450324673386885301">Code postal</translation>
+  <translation id="7292385072831767044">Ville</translation>
+  <translation id="165594150671707240">Numéro de téléphone</translation>
+  <translation id="3967269098753656610">Adresse Email</translation>
+  <translation id="5341491124628154669">Titre de votre site web</translation>
+  <translation id="1690088364488416785">Sous-Titre de votre site web</translation>
+  <translation id="7231401136333776153">Logo de votre société</translation>
+  <translation id="1374904942925221139">Image du header sur votre site web</translation>
+  <translation id="4708358419347650119">Commandes</translation>
+</translationbundle>

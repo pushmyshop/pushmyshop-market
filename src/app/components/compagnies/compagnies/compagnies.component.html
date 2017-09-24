@@ -1,6 +1,6 @@
 <clr-tabs>
     <clr-tab>
-        <button clrTabLink>Add New Compagny</button>
+        <button clrTabLink i18n>Add New Compagny</button>
         <clr-tab-content *clrIfActive>
             <app-compagny [compagnies]=compagnies></app-compagny>
         </clr-tab-content>
@@ -8,7 +8,7 @@
     <clr-tab *ngFor="let compagny of compagnies">
         <button clrTabLink>{{compagny.name}}</button>
         <clr-tab-content *clrIfActive>
-            <h2>Informations</h2>
+            <h2 i18n>Informations</h2>
             <app-infos [compagny]=compagny></app-infos>           
             <app-events [compagny]=compagny [compagnies]=compagnies></app-events>
         </clr-tab-content>

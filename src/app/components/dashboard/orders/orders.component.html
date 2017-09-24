@@ -2,7 +2,7 @@
     <clr-tab *ngFor="let compagny of compagnies">
         <button clrTabLink>{{compagny.name}}</button>
         <clr-tab-content *clrIfActive>      
-            <h2>Carts</h2>
+            <h2 i18n>Carts</h2>
             <app-carts compagnyId={{compagny.id}}></app-carts>
         </clr-tab-content>
     </clr-tab>

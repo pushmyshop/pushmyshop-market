@@ -26,3 +26,23 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## I18N
+
+To generate messages :
+`ng i18n`
+
+To updates messages, you can go to https://poeditor.com
+
+To build application :
+
+`ng build --aot --locale fr --i18n-file src/locale/messages.fr.xtb --i18n-format xtb`
+
+`ng build --aot --locale en --i18n-file src/locale/messages.en.xtb --i18n-format xtb`
+
+To run application :
+
+`ng serve --aot --locale fr --i18n-file src/locale/messages.fr.xtb --i18n-format xtb`
+
+`ng serve --aot --locale en --i18n-file src/locale/messages.en.xtb --i18n-format xtb`

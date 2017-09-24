@@ -1,18 +1,20 @@
 <div class="login-wrapper">
-  <form class="login" (ngSubmit)="login()"  #loginForm="ngForm">
-    <label class="title">
+  <form class="login" (ngSubmit)="login()" #loginForm="ngForm">
+    <label class="title" i18n>
             <h3 class="welcome">Push my shop !</h3>
             Welcome !
         </label>
     <div class="login-group">
 
-      <input class="username" autocomplete="off" type="text" id="login_username" placeholder="Username" name="username" [(ngModel)]="customer.username" required>
-      <input class="password" autocomplete="off" type="password" id="login_password" placeholder="Password" name="password" [(ngModel)]="customer.password" required>
+      <input class="username" autocomplete="off" type="text" id="login_username" placeholder="Username" i18n-placeholder="Username"
+        name="username" [(ngModel)]="customer.username" required>
+      <input class="password" autocomplete="off" type="password" id="login_password" placeholder="Password" i18n-placeholder="Password"
+        name="password" [(ngModel)]="customer.password" required>
       <div *ngIf="error" class="error active">
-        Invalid user name or password
+        Invalid user name or password i18n!
       </div>
-      <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">SIGN IN</button>
-      <a routerLink="/signup" routerLinkActive="active" class="signup">Sign up</a>
+      <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary" i18n>SIGN IN</button>
+      <a routerLink="/signup" routerLinkActive="active" class="signup" i18n>Sign up</a>
     </div>
   </form>
 </div>

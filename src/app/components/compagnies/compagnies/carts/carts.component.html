@@ -1,10 +1,10 @@
 <clr-datagrid *ngIf="carts">
-  <clr-dg-column>Name</clr-dg-column>
-  <clr-dg-column>Picking date</clr-dg-column>
-  <clr-dg-column>Picking hour</clr-dg-column>
-  <clr-dg-column>Phone</clr-dg-column>
-  <clr-dg-column>Products</clr-dg-column>
-  <clr-dg-column>Etat</clr-dg-column>
+  <clr-dg-column i18n>Name</clr-dg-column>
+  <clr-dg-column i18n>Picking date</clr-dg-column>
+  <clr-dg-column i18n>Picking hour</clr-dg-column>
+  <clr-dg-column i18n>Phone</clr-dg-column>
+  <clr-dg-column i18n>Products</clr-dg-column>
+  <clr-dg-column i18n>Etat</clr-dg-column>
   <clr-dg-column></clr-dg-column>
 
   <clr-dg-row *ngFor="let cart of carts" [clrDgItem]="cart">
@@ -14,18 +14,18 @@
     <clr-dg-cell>
       {{cart.pickingDate}}
     </clr-dg-cell>
-    <clr-dg-cell> 
+    <clr-dg-cell>
       {{cart.pickingHour}}
     </clr-dg-cell>
-    <clr-dg-cell> 
+    <clr-dg-cell>
       {{cart.pickingPhone}}
     </clr-dg-cell>
-    <clr-dg-cell> 
+    <clr-dg-cell>
       <div *ngFor="let product of cart.products">
-        {{product.name}} - {{product.price}}€ 
+        {{product.name}} - {{product.price}}€
       </div>
     </clr-dg-cell>
-    <clr-dg-cell> 
+    <clr-dg-cell>
       {{cart.state}}
     </clr-dg-cell>
     <clr-dg-cell>
@@ -36,8 +36,9 @@
         Cancel
         </a>
     </clr-dg-cell>
-  
+
   </clr-dg-row>
 
-  <clr-dg-footer>{{carts.length}} carts</clr-dg-footer>
+  <clr-dg-footer i18n>{{carts.length}} carts
+  </clr-dg-footer>
 </clr-datagrid>
