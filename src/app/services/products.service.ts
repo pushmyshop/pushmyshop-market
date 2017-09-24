@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
+import { environment } from '../../environments/environment';
 
 import { Customer } from '../models/customer';
 import { Product } from '../models/product'
@@ -19,13 +20,13 @@ export class ProductsService {
     let headers = new Headers(
       { 'Authorization': 'Bearer ' + this.customerService.token, 'Content-Type': 'text/uri-list' });
     let options = new RequestOptions({ headers: headers });
-    this.http.put('http://localhost:8080/api/products/' + product.id + '/compagny', 'http://localhost:8080/api/compagny/' + compagnyId, options).subscribe();
+    this.http.put(environment.urlOfApi + '/api/products/' + product.id + '/compagny', environment.urlOfApi + '/api/compagny/' + compagnyId, options).subscribe();
   }
 
   create(product: Product): Observable<Product> {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/products', product, options)
+    return this.http.post(environment.urlOfApi + '/api/products', product, options)
       .map((response: Response) =>
         response.json()
       );
@@ -33,7 +34,7 @@ export class ProductsService {
   save(product: Product): Observable<Product> {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.put('http://localhost:8080/api/products/' + product.id, product, options)
+    return this.http.put(environment.urlOfApi + '/api/products/' + product.id, product, options)
       .map((response: Response) => {
         return response.json()
       }
@@ -43,7 +44,7 @@ export class ProductsService {
   delete(product: Product): Observable<Boolean> {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.delete('http://localhost:8080/api/products/' + product.id, options)
+    return this.http.delete(environment.urlOfApi + '/api/products/' + product.id, options)
       .map((response: Response) => {
         return true;
       }
@@ -52,7 +53,7 @@ export class ProductsService {
   getAllForCompagny(compagnyId: String): Observable<Array<Product>> {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.get('http://localhost:8080/api/compagnies/' + compagnyId + '/products', options)
+    return this.http.get(environment.urlOfApi + '/api/compagnies/' + compagnyId + '/products', options)
       .map((response: Response) =>
         response.json()._embedded.products
       );

@@ -8,6 +8,7 @@ import 'rxjs/add/operator/toPromise';
 import { Cart } from '../models/cart'
 
 import { CustomerService } from './customer.service';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class CartsService {
@@ -18,7 +19,7 @@ export class CartsService {
   getAllForCompagny(compagnyId: String): Observable<Array<Cart>> {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.get('http://localhost:8080/api/compagnies/' + compagnyId + '/carts', options)
+    return this.http.get(environment.urlOfApi + '/api/compagnies/' + compagnyId + '/carts', options)
       .map((response: Response) =>
         response.json()
       );
@@ -27,20 +28,20 @@ export class CartsService {
   confirm(compagnyId: String, cart: Cart): void {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    this.http.post('http://localhost:8080/api/compagnies/' + compagnyId + '/carts/' + cart.id + '/confirm' , {}, options)
-    .toPromise()
-    .then((response: Response) =>
-      response.json()
-    );
+    this.http.post(environment.urlOfApi + '/api/compagnies/' + compagnyId + '/carts/' + cart.id + '/confirm', {}, options)
+      .toPromise()
+      .then((response: Response) =>
+        response.json()
+      );
   }
-  
+
   cancel(compagnyId: String, cart: Cart): void {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    this.http.post('http://localhost:8080/api/compagnies/' + compagnyId + '/carts/' + cart.id + '/cancel' , {}, options)
-    .toPromise()
-    .then((response: Response) =>
-      response.json()
-    );
+    this.http.post(environment.urlOfApi + '/api/compagnies/' + compagnyId + '/carts/' + cart.id + '/cancel', {}, options)
+      .toPromise()
+      .then((response: Response) =>
+        response.json()
+      );
   }
 }

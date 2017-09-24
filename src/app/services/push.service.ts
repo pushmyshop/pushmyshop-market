@@ -9,7 +9,7 @@ export class PushService {
 
   constructor() { }
 
-  subscribeToPush(compagnyId: String) : void {
+  subscribeToPush(compagnyId: String): void {
 
     const convertedVapidKey = this.urlBase64ToUint8Array(environment.vapidPublicKey);
 
@@ -20,12 +20,12 @@ export class PushService {
         registration.pushManager
           .subscribe({ userVisibleOnly: true, applicationServerKey: convertedVapidKey })
           .then(function (subscription) {
-            return fetch('http://localhost:8080/api/compagnies/' + compagnyId + '/carts/webpush', {
+            return fetch(environment.urlOfApi + '/api/compagnies/' + compagnyId + '/carts/webpush', {
               method: "POST",
               body: JSON.stringify({
-                endpoint : subscription.endpoint,
-                publicKey : subscription.toJSON().keys.p256dh,
-                auth : subscription.toJSON().keys.auth
+                endpoint: subscription.endpoint,
+                publicKey: subscription.toJSON().keys.p256dh,
+                auth: subscription.toJSON().keys.auth
               }),
               headers: { 'Content-Type': 'application/json' }
             })
@@ -47,7 +47,7 @@ export class PushService {
 
   }
 
-  private urlBase64ToUint8Array(base64String) : Uint8Array {
+  private urlBase64ToUint8Array(base64String): Uint8Array {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
     const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
     const rawData = window.atob(base64);

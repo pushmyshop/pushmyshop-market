@@ -5,6 +5,7 @@ import { Customer } from '../models/customer'
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { AuthGuardService } from './auth-guard.service';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class CustomerService {
@@ -22,7 +23,7 @@ export class CustomerService {
 
   new(customer: Customer): Observable<Response> {
     return this.http
-      .post('http://localhost:8080/api/customers', customer);
+      .post(environment.urlOfApi + '/api/customers', customer);
   }
 
   logout() {
@@ -34,7 +35,7 @@ export class CustomerService {
   getCurrentUser(username: String): Observable<Boolean> {
     let headers = new Headers({ 'Authorization': this.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.get('http://localhost:8080/api/customers/search/findByUsername?username=' + username, options)
+    return this.http.get(environment.urlOfApi + '/api/customers/search/findByUsername?username=' + username, options)
       .map((response: Response) => {
         let customerResponse = response.json();
         if (customerResponse) {
@@ -49,7 +50,7 @@ export class CustomerService {
 
   login(customer: Customer): Observable<boolean> {
     return this.http
-      .post('http://localhost:8080/login', JSON.stringify(customer))
+      .post(environment.urlOfApi + '/login', JSON.stringify(customer))
       .map((response: Response) => {
         let tokenResponse = response.text();
         if (tokenResponse) {

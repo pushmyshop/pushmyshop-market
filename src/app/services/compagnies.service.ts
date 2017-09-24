@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 import { Compagny } from '../models/compagny';
 
 import { CustomerService } from './customer.service';
+import { environment } from '../../environments/environment';
 
 
 
@@ -19,13 +20,13 @@ export class CompagniesService {
     let headers = new Headers(
       { 'Authorization': 'Bearer ' + this.customerService.token, 'Content-Type': 'text/uri-list' });
     let options = new RequestOptions({ headers: headers });
-    this.http.put('http://localhost:8080/api/compagnies/' + compagny.id + '/customer', 'http://localhost:8080/api/customers/' + this.customerService.customer.id, options).subscribe();
+    this.http.put(environment.urlOfApi + '/api/compagnies/' + compagny.id + '/customer', environment.urlOfApi + '/api/customers/' + this.customerService.customer.id, options).subscribe();
   }
 
   create(compagny: Compagny): Observable<Compagny> {
     let headers = new Headers({ 'Authorization': this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/compagnies', compagny, options)
+    return this.http.post(environment.urlOfApi + '/api/compagnies', compagny, options)
       .map(
       (response: Response) => {
         return response.json();
@@ -36,17 +37,17 @@ export class CompagniesService {
   update(compagny: Compagny): Observable<Compagny> {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.put('http://localhost:8080/api/compagnies/' + compagny.id, compagny, options)
+    return this.http.put(environment.urlOfApi + '/api/compagnies/' + compagny.id, compagny, options)
       .map((response: Response) => {
-          return response.json()
-        }
+        return response.json()
+      }
       );
   }
 
   generateSite(compagny: Compagny): Observable<Compagny> {
     let headers = new Headers({ 'Authorization': this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.put('http://localhost:8080/api/compagnies/' + compagny.id, compagny, options)
+    return this.http.put(environment.urlOfApi + '/api/compagnies/' + compagny.id, compagny, options)
       .map(
       (response: Response) => {
         return response.json();
@@ -56,14 +57,14 @@ export class CompagniesService {
   getAll(): Observable<Array<Compagny>> {
     let headers = new Headers({ 'Authorization': this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.get('http://localhost:8080/api/customers/' + this.customerService.customer.id + '/compagnies', options)
+    return this.http.get(environment.urlOfApi + '/api/customers/' + this.customerService.customer.id + '/compagnies', options)
       .map((response: Response) => response.json()._embedded.compagnies);
   }
 
   delete(compagny: Compagny): Observable<Boolean> {
     let headers = new Headers({ 'Authorization': 'Bearer ' + this.customerService.token });
     let options = new RequestOptions({ headers: headers });
-    return this.http.delete('http://localhost:8080/api/compagnies/' + compagny.id, options)
+    return this.http.delete(environment.urlOfApi + '/api/compagnies/' + compagny.id, options)
       .map((response: Response) => {
         return true;
       }
