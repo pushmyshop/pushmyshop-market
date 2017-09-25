@@ -9,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "i18n": "ng-xi18n -p src/tsconfig.app.json --i18nFormat=xmb"
+    "i18n": "ng-xi18n -p src/tsconfig.app.json --i18nFormat=xmb",
+    "docker:build": "docker build -t 'pushmyshop/pushmyshop-market:latest' .",
+    "docker:push": "docker push pushmyshop/pushmyshop-market:latest"
   },
   "private": true,
   "dependencies": {
