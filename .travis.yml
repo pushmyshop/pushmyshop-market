@@ -6,6 +6,9 @@ node_js:
 services:
   - docker
 before_script:
+  - sudo apt-get update
+  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
+  - sudo mv docker-compose /usr/local/bin
   - npm install -g @angular/cli
 
 script:
