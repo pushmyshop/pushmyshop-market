@@ -73,7 +73,7 @@ export const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     ClarityModule.forRoot(),
-    RouterModule.forRoot(routes, { useHash: true }),
+    RouterModule.forRoot(routes),
     HttpModule
   ],
   providers: [AuthGuardService, PushService],

@@ -8,8 +8,17 @@
           "/": {
             "match": "exact"
           },
-          "^/.*$": {
-            "match": "regex"
+          "/signup": {
+            "match": "exact"
+          },
+          "/compagnies": {
+            "match": "exact"
+          },
+          "/stores": {
+            "match": "exact"
+          },
+          "/orders": {
+            "match": "exact"
           }
         }
     },
