@@ -1,0 +1,15 @@
+sudo: required
+
+language: node_js
+node_js:
+  - "7"
+services:
+  - docker
+
+install:
+  - npm install
+
+after_success:
+  - docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD" docker-io
+  - docker build -t 'pushmyshop/pushmyshop-market:latest' .
+  - docker push pushmyshop/pushmyshop-market:latest
