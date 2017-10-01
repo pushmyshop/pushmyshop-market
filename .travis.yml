@@ -12,7 +12,7 @@ before_script:
   - npm install -g @angular/cli
 
 script:
-  - ng build --prod
+  - $(npm bin)/ng build --prod --build-optimizer --aot --locale fr --i18n-file src/locale/messages.fr.xtb --i18n-format xtb
 
 notifications:
   email:
