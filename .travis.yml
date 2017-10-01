@@ -18,6 +18,6 @@ notifications:
 
 
 after_success:
-  - docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD" docker.io
+  - docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD" docker.io/pushmyshop
   - docker build -t pushmyshop/pushmyshop-market:latest .
   - docker push pushmyshop/pushmyshop-market:latest
