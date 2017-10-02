@@ -1,0 +1,44 @@
+<clr-datagrid *ngIf="carts" (clrDgRefresh)="refresh($event)">
+  <clr-dg-column [clrDgField]="'cart.pickingName'" i18n>Name</clr-dg-column>
+  <clr-dg-column [clrDgField]="'cart.pickingDate'" i18n>Picking date</clr-dg-column>
+  <clr-dg-column i18n>Picking hour</clr-dg-column>
+  <clr-dg-column i18n>Phone</clr-dg-column>
+  <clr-dg-column i18n>Products</clr-dg-column>
+  <clr-dg-column [clrDgField]="'cart.state'" i18n>Etat</clr-dg-column>
+  <clr-dg-column></clr-dg-column>
+
+  <clr-dg-row *ngFor="let cart of carts" [clrDgItem]="cart">
+    <clr-dg-cell>
+      {{cart.pickingName}}
+    </clr-dg-cell>
+    <clr-dg-cell>
+      {{cart.pickingDate}}
+    </clr-dg-cell>
+    <clr-dg-cell>
+      {{cart.pickingHour}}
+    </clr-dg-cell>
+    <clr-dg-cell>
+      {{cart.pickingPhone}}
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <div *ngFor="let product of cart.products">
+        {{product.name}} - {{product.price}}€
+      </div>
+    </clr-dg-cell>
+    <clr-dg-cell>
+      {{cart.state}}
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <a (click)="cart.state!=='CONFIRMED' && confirm(cart)" [class.disabled]="cart.state==='CONFIRMED'" class="label label-success clickable">
+        Confirm
+        </a>
+      <a (click)="cart.state!=='CONFIRMED' && cancel(cart)" [class.disabled]="cart.state==='CONFIRMED'" class="label label-danger clickable">
+        Cancel
+        </a>
+    </clr-dg-cell>
+
+  </clr-dg-row>
+
+  <clr-dg-footer i18n>{{carts.length}} carts
+  </clr-dg-footer>
+</clr-datagrid>

@@ -1,0 +1,6 @@
+a.disabled {
+    color: gray;
+    text-decoration: underline;
+    pointer-events: none;
+    cursor: default;
+}

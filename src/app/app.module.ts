@@ -25,6 +25,7 @@ import { InfosComponent } from "./components/compagnies/compagnies/infos/infos.c
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { OrdersComponent } from './components/dashboard/orders/orders.component';
 import { StoresComponent } from './components/dashboard/stores/stores.component';
+import { CartsTableComponent } from './components/compagnies/compagnies/carts-table/carts-table.component';
 
 export const routes: Routes = [
   {
@@ -66,7 +67,8 @@ export const routes: Routes = [
     InfosComponent,
     NavbarComponent,
     OrdersComponent,
-    StoresComponent
+    StoresComponent,
+    CartsTableComponent
   ],
   imports: [
     BrowserModule,
