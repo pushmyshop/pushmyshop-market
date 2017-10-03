@@ -13,7 +13,7 @@ export class Compagny {
   public postalCode: string;
   public town: string;
   public telephoneNumber: string;
-  public emailAdress: string;
+  public emailAddress: string;
   public image: string;
   public logo: string;
 
